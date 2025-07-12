@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>کلینیک زیبایی ایروانی</title>
     <style>
+        /* --- مرحله نهایی: فراخوانی فونت از پوشه محلی --- */
+        @font-face {
+            font-family: 'B Nazanin';
+            /* اولویت با فرمت جدیدتر و فشرده‌تر woff2 است */
+            src: url('fonts/b-nazanin.woff2') format('woff2'),
+                 url('fonts/b-nazanin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,13 +22,14 @@
         }
 
         body {
-            font-family: 'IRANSans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'B Nazanin', 'IRANSans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #F7F6F6;
             color: #242019;
             overflow-x: hidden;
         }
 
+        /* بقیه کدهای CSS شما بدون تغییر باقی می‌مانند */
         .header {
             background: linear-gradient(135deg, #46522F 0%, #90755D 70%, #C8C3BD 100%);
             padding: 15px 0;
@@ -505,15 +516,15 @@
 
         .copyright a {
             color: #90755D;
-            text-decoration: none; /* برای حذف خط زیر لینک */
+            text-decoration: none;
         }
 
         .copyright a:hover {
-            text-decoration: underline; /* برای نمایش خط زیر هنگام hover */
+            text-decoration: underline;
         }
-        /* استایل دکمه همبرگری */
+
         .nav-toggle {
-            display: none; /* در حالت دسکتاپ پنهان باشد */
+            display: none;
             background: transparent;
             border: 0;
             cursor: pointer;
@@ -549,7 +560,6 @@
             transform: translateY(8px);
         }
 
-        /* استایل برای حالت باز شده منو */
         .nav-open .hamburger {
             transform: rotate(45deg);
         }
@@ -564,21 +574,20 @@
 
 
         @media (max-width: 768px) {
-            /* استایل‌های دکمه همبرگری و منوی موبایل */
             .nav-toggle {
-                display: block; /* نمایش دکمه در موبایل */
-                z-index: 1001; /* بالاتر از سایر المان‌ها */
+                display: block;
+                z-index: 1001;
             }
 
             .nav-menu {
                 position: fixed;
                 top: 0;
-                right: -100%; /* در ابتدا خارج از صفحه باشد */
+                right: -100%;
                 width: 60%;
                 height: 100vh;
                 background: rgba(70, 82, 47, 0.95);
                 backdrop-filter: blur(10px);
-                display: flex; /* برای چیدمان عمودی آیتم‌ها */
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -587,33 +596,31 @@
             }
 
             .nav-menu.active {
-                right: 0; /* با افزودن کلاس active نمایش داده شود */
+                right: 0;
             }
 
             .nav-item a {
                 font-size: 18px;
             }
 
-            /* استایل‌های بخش Hero */
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
-                padding-top: 40px; /* ایجاد فاصله از بالا */
+                padding-top: 40px;
             }
 
             .hero-image {
                 flex-direction: column;
                 align-items: center;
-                width: 100%; /* اطمینان از اینکه والد هم عرض کامل دارد */
-                gap: 0; /* حذف فاصله اضافی بین کارت‌ها در موبایل */
+                width: 100%;
+                gap: 0;
             }
 
             .hero-card {
                 width: 90%; 
-                margin: 0 auto 20px auto; /* وسط‌چین کردن و ایجاد فاصله پایین */
+                margin: 0 auto 20px auto;
             }
 
-            /* استایل سایر بخش‌ها */
             .about-container {
                 grid-template-columns: 1fr;
             }
@@ -761,16 +768,17 @@
             </div>
             <p>ما در کلینیک زیبایی با ارائه خدمات حرفه‌ای و استفاده از بهترین محصولات، آمادگی خدمت‌رسانی به شما عزیزان را داریم.</p>
             <div class="social-links">
-                <a href="tel:+982112345678" class="social-link">📞</a>
+                <a href="tel:+989038249598" class="social-link">📞</a>
                 <a href="https://instagram.com/your_username_here" class="social-link" target="_blank" aria-label="صفحه اینستاگرام ما">
-                    <svg width="32px" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop> </radialGradient> </defs> </g></svg> </a>        
+                     <svg width="32p" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop> </radialGradient> </defs> </g></svg>
+                </a>
                 <a href="https://t.me/your_username_here" class="social-link" target="_blank" aria-label="کانال تلگرام ما">
-                    <svg width="24px" height="24px" viewBox="0 0 100 100" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#FFFFFF;} .st1{fill:#F5BB41;} .st2{fill:#2167D1;} .st3{fill:#3D84F3;} .st4{fill:#4CA853;} .st5{fill:#398039;} .st6{fill:#D74F3F;} .st7{fill:#D43C89;} .st8{fill:#B2005F;} .st9{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st10{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st11{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#040404;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st12{fill-rule:evenodd;clip-rule:evenodd;} .st13{fill-rule:evenodd;clip-rule:evenodd;fill:#040404;} .st14{fill:url(#SVGID_1_);} .st15{fill:url(#SVGID_2_);} .st16{fill:url(#SVGID_3_);} .st17{fill:url(#SVGID_4_);} .st18{fill:url(#SVGID_5_);} .st19{fill:url(#SVGID_6_);} .st20{fill:url(#SVGID_7_);} .st21{fill:url(#SVGID_8_);} .st22{fill:url(#SVGID_9_);} .st23{fill:url(#SVGID_10_);} .st24{fill:url(#SVGID_11_);} .st25{fill:url(#SVGID_12_);} .st26{fill:url(#SVGID_13_);} .st27{fill:url(#SVGID_14_);} .st28{fill:url(#SVGID_15_);} .st29{fill:url(#SVGID_16_);} .st30{fill:url(#SVGID_17_);} .st31{fill:url(#SVGID_18_);} .st32{fill:url(#SVGID_19_);} .st33{fill:url(#SVGID_20_);} .st34{fill:url(#SVGID_21_);} .st35{fill:url(#SVGID_22_);} .st36{fill:url(#SVGID_23_);} .st37{fill:url(#SVGID_24_);} .st38{fill:url(#SVGID_25_);} .st39{fill:url(#SVGID_26_);} .st40{fill:url(#SVGID_27_);} .st41{fill:url(#SVGID_28_);} .st42{fill:url(#SVGID_29_);} .st43{fill:url(#SVGID_30_);} .st44{fill:url(#SVGID_31_);} .st45{fill:url(#SVGID_32_);} .st46{fill:url(#SVGID_33_);} .st47{fill:url(#SVGID_34_);} .st48{fill:url(#SVGID_35_);} .st49{fill:url(#SVGID_36_);} .st50{fill:url(#SVGID_37_);} .st51{fill:url(#SVGID_38_);} .st52{fill:url(#SVGID_39_);} .st53{fill:url(#SVGID_40_);} .st54{fill:url(#SVGID_41_);} .st55{fill:url(#SVGID_42_);} .st56{fill:url(#SVGID_43_);} .st57{fill:url(#SVGID_44_);} .st58{fill:url(#SVGID_45_);} .st59{fill:#040404;} .st60{fill:url(#SVGID_46_);} .st61{fill:url(#SVGID_47_);} .st62{fill:url(#SVGID_48_);} .st63{fill:url(#SVGID_49_);} .st64{fill:url(#SVGID_50_);} .st65{fill:url(#SVGID_51_);} .st66{fill:url(#SVGID_52_);} .st67{fill:url(#SVGID_53_);} .st68{fill:url(#SVGID_54_);} .st69{fill:url(#SVGID_55_);} .st70{fill:url(#SVGID_56_);} .st71{fill:url(#SVGID_57_);} .st72{fill:url(#SVGID_58_);} .st73{fill:url(#SVGID_59_);} .st74{fill:url(#SVGID_60_);} .st75{fill:url(#SVGID_61_);} .st76{fill:url(#SVGID_62_);} .st77{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;} .st78{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;} .st79{fill:#4BC9FF;} .st80{fill:#5500DD;} .st81{fill:#FF3A00;} .st82{fill:#E6162D;} .st83{fill:#F1F1F1;} .st84{fill:#FF9933;} .st85{fill:#B92B27;} .st86{fill:#00ACED;} .st87{fill:#BD2125;} .st88{fill:#1877F2;} .st89{fill:#6665D2;} .st90{fill:#CE3056;} .st91{fill:#5BB381;} .st92{fill:#61C3EC;} .st93{fill:#E4B34B;} .st94{fill:#181EF2;} .st95{fill:#FF0000;} .st96{fill:#FE466C;} .st97{fill:#FA4778;} .st98{fill:#FF7700;} .st99{fill-rule:evenodd;clip-rule:evenodd;fill:#1F6BF6;} .st100{fill:#520094;} .st101{fill:#4477E8;} .st102{fill:#3D1D1C;} .st103{fill:#FFE812;} .st104{fill:#344356;} .st105{fill:#00CC76;} .st106{fill-rule:evenodd;clip-rule:evenodd;fill:#345E90;} .st107{fill:#1F65D8;} .st108{fill:#EB3587;} .st109{fill-rule:evenodd;clip-rule:evenodd;fill:#603A88;} .st110{fill:#E3CE99;} .st111{fill:#783AF9;} .st112{fill:#FF515E;} .st113{fill:#FF4906;} .st114{fill:#503227;} .st115{fill:#4C7BD9;} .st116{fill:#69C9D0;} .st117{fill:#1B92D1;} .st118{fill:#EB4F4A;} .st119{fill:#513728;} .st120{fill:#FF6600;} .st121{fill-rule:evenodd;clip-rule:evenodd;fill:#B61438;} .st122{fill:#FFFC00;} .st123{fill:#141414;} .st124{fill:#94D137;} .st125{fill-rule:evenodd;clip-rule:evenodd;fill:#F1F1F1;} .st126{fill-rule:evenodd;clip-rule:evenodd;fill:#66E066;} .st127{fill:#2D8CFF;} .st128{fill:#F1A300;} .st129{fill:#4BA2F2;} .st130{fill:#1A5099;} .st131{fill:#EE6060;} .st132{fill-rule:evenodd;clip-rule:evenodd;fill:#F48120;} .st133{fill:#222222;} .st134{fill:url(#SVGID_63_);} .st135{fill:#0077B5;} .st136{fill:#FFCC00;} .st137{fill:#EB3352;} .st138{fill:#F9D265;} .st139{fill:#F5B955;} .st140{fill:#DD2A7B;} .st141{fill:#66E066;} .st142{fill:#EB4E00;} .st143{fill:#FFC794;} .st144{fill:#B5332A;} .st145{fill:#4E85EB;} .st146{fill:#58A45C;} .st147{fill:#F2BC42;} .st148{fill:#D85040;} .st149{fill:#464EB8;} .st150{fill:#7B83EB;} </style> <g id="Layer_1"></g> <g id="Layer_2"> <g> <path class="st117" d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392 s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431 c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691 c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659 C97.307,8.804,88.723,12.142,88.723,12.142z"></path> </g> </g> </g></svg></a>
-                <a href="sms:+1234567890?&body=سلام! این یک پیام تست است." class="social-link" >💬</a>
+                    <svg width="24px" height="24px" viewBox="0 0 100 100" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#FFFFFF;} .st1{fill:#F5BB41;} .st2{fill:#2167D1;} .st3{fill:#3D84F3;} .st4{fill:#4CA853;} .st5{fill:#398039;} .st6{fill:#D74F3F;} .st7{fill:#D43C89;} .st8{fill:#B2005F;} .st9{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st10{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st11{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#040404;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st12{fill-rule:evenodd;clip-rule:evenodd;} .st13{fill-rule:evenodd;clip-rule:evenodd;fill:#040404;} .st14{fill:url(#SVGID_1_);} .st15{fill:url(#SVGID_2_);} .st16{fill:url(#SVGID_3_);} .st17{fill:url(#SVGID_4_);} .st18{fill:url(#SVGID_5_);} .st19{fill:url(#SVGID_6_);} .st20{fill:url(#SVGID_7_);} .st21{fill:url(#SVGID_8_);} .st22{fill:url(#SVGID_9_);} .st23{fill:url(#SVGID_10_);} .st24{fill:url(#SVGID_11_);} .st25{fill:url(#SVGID_12_);} .st26{fill:url(#SVGID_13_);} .st27{fill:url(#SVGID_14_);} .st28{fill:url(#SVGID_15_);} .st29{fill:url(#SVGID_16_);} .st30{fill:url(#SVGID_17_);} .st31{fill:url(#SVGID_18_);} .st32{fill:url(#SVGID_19_);} .st33{fill:url(#SVGID_20_);} .st34{fill:url(#SVGID_21_);} .st35{fill:url(#SVGID_22_);} .st36{fill:url(#SVGID_23_);} .st37{fill:url(#SVGID_24_);} .st38{fill:url(#SVGID_25_);} .st39{fill:url(#SVGID_26_);} .st40{fill:url(#SVGID_27_);} .st41{fill:url(#SVGID_28_);} .st42{fill:url(#SVGID_29_);} .st43{fill:url(#SVGID_30_);} .st44{fill:url(#SVGID_31_);} .st45{fill:url(#SVGID_32_);} .st46{fill:url(#SVGID_33_);} .st47{fill:url(#SVGID_34_);} .st48{fill:url(#SVGID_35_);} .st49{fill:url(#SVGID_36_);} .st50{fill:url(#SVGID_37_);} .st51{fill:url(#SVGID_38_);} .st52{fill:url(#SVGID_39_);} .st53{fill:url(#SVGID_40_);} .st54{fill:url(#SVGID_41_);} .st55{fill:url(#SVGID_42_);} .st56{fill:url(#SVGID_43_);} .st57{fill:url(#SVGID_44_);} .st58{fill:url(#SVGID_45_);} .st59{fill:#040404;} .st60{fill:url(#SVGID_46_);} .st61{fill:url(#SVGID_47_);} .st62{fill:url(#SVGID_48_);} .st63{fill:url(#SVGID_49_);} .st64{fill:url(#SVGID_50_);} .st65{fill:url(#SVGID_51_);} .st66{fill:url(#SVGID_52_);} .st67{fill:url(#SVGID_53_);} .st68{fill:url(#SVGID_54_);} .st69{fill:url(#SVGID_55_);} .st70{fill:url(#SVGID_56_);} .st71{fill:url(#SVGID_57_);} .st72{fill:url(#SVGID_58_);} .st73{fill:url(#SVGID_59_);} .st74{fill:url(#SVGID_60_);} .st75{fill:url(#SVGID_61_);} .st76{fill:url(#SVGID_62_);} .st77{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;} .st78{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;} .st79{fill:#4BC9FF;} .st80{fill:#5500DD;} .st81{fill:#FF3A00;} .st82{fill:#E6162D;} .st83{fill:#F1F1F1;} .st84{fill:#FF9933;} .st85{fill:#B92B27;} .st86{fill:#00ACED;} .st87{fill:#BD2125;} .st88{fill:#1877F2;} .st89{fill:#6665D2;} .st90{fill:#CE3056;} .st91{fill:#5BB381;} .st92{fill:#61C3EC;} .st93{fill:#E4B34B;} .st94{fill:#181EF2;} .st95{fill:#FF0000;} .st96{fill:#FE466C;} .st97{fill:#FA4778;} .st98{fill:#FF7700;} .st99{fill-rule:evenodd;clip-rule:evenodd;fill:#1F6BF6;} .st100{fill:#520094;} .st101{fill:#4477E8;} .st102{fill:#3D1D1C;} .st103{fill:#FFE812;} .st104{fill:#344356;} .st105{fill:#00CC76;} .st106{fill-rule:evenodd;clip-rule:evenodd;fill:#345E90;} .st107{fill:#1F65D8;} .st108{fill:#EB3587;} .st109{fill-rule:evenodd;clip-rule:evenodd;fill:#603A88;} .st110{fill:#E3CE99;} .st111{fill:#783AF9;} .st112{fill:#FF515E;} .st113{fill:#FF4906;} .st114{fill:#503227;} .st115{fill:#4C7BD9;} .st116{fill:#69C9D0;} .st117{fill:#1B92D1;} .st118{fill:#EB4F4A;} .st119{fill:#513728;} .st120{fill:#FF6600;} .st121{fill-rule:evenodd;clip-rule:evenodd;fill:#B61438;} .st122{fill:#FFFC00;} .st123{fill:#141414;} .st124{fill:#94D137;} .st125{fill-rule:evenodd;clip-rule:evenodd;fill:#F1F1F1;} .st126{fill-rule:evenodd;clip-rule:evenodd;fill:#66E066;} .st127{fill:#2D8CFF;} .st128{fill:#F1A300;} .st129{fill:#4BA2F2;} .st130{fill:#1A5099;} .st131{fill:#EE6060;} .st132{fill-rule:evenodd;clip-rule:evenodd;fill:#F48120;} .st133{fill:#222222;} .st134{fill:url(#SVGID_63_);} .st135{fill:#0077B5;} .st136{fill:#FFCC00;} .st137{fill:#EB3352;} .st138{fill:#F9D265;} .st139{fill:#F5B955;} .st140{fill:#DD2A7B;} .st141{fill:#66E066;} .st142{fill:#EB4E00;} .st143{fill:#FFC794;} .st144{fill:#B5332A;} .st145{fill:#4E85EB;} .st146{fill:#58A45C;} .st147{fill:#F2BC42;} .st148{fill:#D85040;} .st149{fill:#464EB8;} .st150{fill:#7B83EB;} </style> <g id="Layer_1"></g> <g id="Layer_2"> <g> <path class="st117" d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392 s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431 c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691 c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659 C97.307,8.804,88.723,12.142,88.723,12.142z"></path> </g> </g> </g></svg>
+                </a>
+                <a href="sms:+989038249598?&body=سلام، برای رزرو نوبت پیام می‌دهم." class="social-link" >💬</a>
             </div>
             <div class="copyright">
-                <p>&copy; 2025طراحی و تولید توسط <a href="https://mrrsd01.github.io/Portfolio/">MrRsd01</a></p>
-
+                <p>&copy; 2025 طراحی و تولید توسط <a href="https://mrrsd01.github.io/Portfolio/">MrRsd01</a></p>
             </div>
         </div>
     </footer>
@@ -824,6 +832,7 @@
         document.querySelectorAll('.scroll-animation').forEach(el => {
             observer.observe(el);
         });
+
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
@@ -832,7 +841,6 @@
             navMenu.classList.toggle('active');
         });
 
-        // بستن منو با کلیک روی هر آیتم
         document.querySelectorAll('.nav-item a').forEach(link => {
             link.addEventListener('click', () => {
                 if (document.body.classList.contains('nav-open')) {
